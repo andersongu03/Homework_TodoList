@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 防止image跟button同時觸發事件 */
+i{
+    pointer-events: none;
+}
+
+/* Background setting */
+body{
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+/* Header setting */
+header{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: black;
+    font-size: 3rem;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input,button{
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    margin: 0.1rem;
+}
+form button{
+    cursor: pointer;
+    background-color: antiquewhite;
+    color: black;
+}
+
+/* 待辦事項框 */
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.todo{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0rem;
+    transition: all 0.5s ease;
+}
+section span{
+    background-color: white;
+    color:black;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.2rem;
+}
+section span.todo-text{
+    width: 100vw;
+}
+section button {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    border: none;
+    cursor:pointer;
+}
+button.check{
+    color: green;
+}
+button.edit{
+    color:burlywood;
+}
+button.trash{
+    color: darkgrey;
+}
+.done{
+    opacity: 0.5;
+}
+
+@keyframes scaleUp{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown{
+    to{
+        transform: scale(0);
+    }
+}
